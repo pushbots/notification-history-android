@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NotificationsHistory</string>
+    <string name="delete">Clear Notifications</string>
+</resources>
