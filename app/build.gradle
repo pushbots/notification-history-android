@@ -6,9 +6,9 @@ android {
     defaultConfig {
         applicationId "com.pushbots.notificationshistory"
         manifestPlaceholders = [manifestApplicationId         : "${applicationId}",
-                                pushbots_app_id               : "584ee78f4a9efa73f58b456a",
+                                pushbots_app_id               : "585a7cba4a9efa10fb8b4570",
                                 pushbots_loglevel             : "DEBUG",
-                                google_sender_id              : "625270302422"]
+                                google_sender_id              : "332366247830"]
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1

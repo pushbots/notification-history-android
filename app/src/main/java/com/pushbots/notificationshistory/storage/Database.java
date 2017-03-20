@@ -143,12 +143,11 @@ public class Database extends SQLiteOpenHelper {
     public void insertNotificationData(Bundle bundle) {
 
         try {
-            Log.e("BundleDB", bundle.toString());
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues values = new ContentValues();
             values.put(DatabaseContract.DataEntry.COLUMN_NOTIFICATION_ID, bundle.getString(Constants.NOTIFICATION_ID, ""));
             values.put(DatabaseContract.DataEntry.COLUMN_MESSAGE, bundle.getString(Constants.MESSAGE, ""));
-            values.put(COLUMN_DATE, bundle.getString(Constants.SENT_TIME, ""));
+            values.put(COLUMN_DATE, bundle.getLong(Constants.SENT_TIME, 0));
 // Insert the new row, returning the primary key value of the new row
             db.insert(DatabaseContract.DataEntry.TABLE_NAME, null, values);
             db.close();

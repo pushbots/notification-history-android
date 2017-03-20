@@ -25,6 +25,7 @@ public class CustomHandler extends BroadcastReceiver {
         if (action.equals(PBConstants.EVENT_MSG_RECEIVE)) {
             Database database = new Database(context);
             database.insertNotificationData(intent.getBundleExtra(PBConstants.EVENT_MSG_RECEIVE));
+            Log.e("image", intent.getBundleExtra(PBConstants.EVENT_MSG_RECEIVE).getString("image"));
         }
         // Handle Push Message when opened
         if (action.equals(PBConstants.EVENT_MSG_OPEN)) {
